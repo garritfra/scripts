@@ -15,8 +15,8 @@ git checkout $CURRENT_BRANCH
 
 if [ $STASHED_CHANGES -gt 5 ] 
 then
-    echo "Changes have been unstashed"
     git stash pop
+    echo "Changes have been unstashed"
 fi
 
 echo "Pull complete"
