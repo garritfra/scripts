@@ -7,4 +7,6 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 TICKET_NUMBER=$(echo $CURRENT_BRANCH | grep -oh "[A-Z]*-[0-9]*" | head -1)
 
-echo $TICKET_NUMBER: $*
+COMMIT_MESSAGE="$TICKET_NUMBER - $*"
+
+git commit -m "$COMMIT_MESSAGE"
